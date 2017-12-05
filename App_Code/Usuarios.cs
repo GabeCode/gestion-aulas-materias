@@ -731,7 +731,7 @@ public class Usuarios
         MailMessage mail = new MailMessage();
         SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
         //Especificamos el correo desde el que se enviará el Email y el nombre de la persona que lo envía
-        mail.From = new MailAddress("fitnessmotivation205@gmail.com", "Gabriel", Encoding.UTF8);
+        mail.From = new MailAddress("example@gmail.com", "MiNombre", Encoding.UTF8);
         //Aquí ponemos el asunto del correo
         mail.Subject = sub;
         //Aquí ponemos el mensaje que incluirá el correo
@@ -744,7 +744,7 @@ public class Usuarios
         //Configuracion del SMTP
         SmtpServer.Port = 587; //Puerto que utiliza Gmail para sus servicios
                                //Especificamos las credenciales con las que enviaremos el mail
-        SmtpServer.Credentials = new System.Net.NetworkCredential("fitnessmotivation205@gmail.com", "1997compton");
+        SmtpServer.Credentials = new System.Net.NetworkCredential("example@gmail.com", "pasword");
         SmtpServer.EnableSsl = true;
         SmtpServer.Send(mail);
     }
