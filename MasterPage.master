@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="headContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css"/>
+    <!-- Compiled and minified JavaScript -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            background-color:#fafafa;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        main {
+            flex: 1 0 auto;
+        }
+        header{
+            height: 90px;
+        }
+        div#header{
+            height:100%;
+            width:85%;
+        }
+        div#navbar{
+            width:85%;
+            margin : 0 auto;
+        }
+        .contenido{
+            min-height:400px;
+            background-color:#fafafa;
+        }
+        .menu{
+            padding:20px;
+            min-height:300px;
+            height:400px;
+            margin : 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- Header -->
+    <header class="red lighten-1">
+        <div id="header" class="row">
+            <!-- Header <div class="A col s12 center-align"><img src="img/brand.png" alt="" width="80" height="80"/></div>-->
+        </div>
+    </header>
+    <!-- Fin Header -->
+
+    <!-- Nav -->
+    <nav class="blue-grey">
+        <div id="navbar" class="nav-wrapper">
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><asp:LinkButton ID="lkbInicio" runat="server" PostBackUrl="~/home.aspx">Inicio</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lkbListado" runat="server" PostBackUrl="~/listadoMaterias.aspx">Listado de Materias</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lkbNosotros" runat="server" PostBackUrl="~/nosotros.aspx">Nosotros</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lkbContactar" runat="server" PostBackUrl="~/contactar.aspx">Contactar</asp:LinkButton></li>
+                
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><asp:LinkButton ID="lkbInicioMobile" runat="server" PostBackUrl="~/home.aspx">Inicio</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lkbListado2Mobile" runat="server" PostBackUrl="~/listadoMaterias.aspx">Listado de Materias</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lkbNosotrosMobile" runat="server" PostBackUrl="~/nosotros.aspx">Nosotros</asp:LinkButton></li>
+                <li><asp:LinkButton ID="lkbContactarMobile" runat="server" PostBackUrl="~/contactar.aspx">Contactar</asp:LinkButton></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Fin Nav -->
+    <div class="row">
+        <!-- Menu -->
+        <div class="col s12 m4 l3 blue-grey lighten-5"> <!-- Note that "m4 l3" was added -->
+            <div class="menu">
+                <asp:ContentPlaceHolder ID="menuContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- Fin Menu -->
+       
+        <!-- Contenido -->
+        <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+            <div class="contenido">
+                <asp:ContentPlaceHolder id="principalContent" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <!-- Fin Contenido -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer blue-grey">
+        <div class="container">
+        <div class="row">
+            <div class="col s8">
+            <h5 class="white-text">Detalles:</h5>
+            <p class="grey-text text-lighten-4">Sistema para gestionar las aulas de la Univesidad Tecnológica de El Salvador</p>
+            </div>
+            <div class="col s4">
+            <h5 class="white-text">Links Utec:</h5>
+            <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">UTEC Virtual</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Portal Utec</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright">
+        <div class="container">
+        © 2014 Copyright U$ER$
+        </div>
+        </div>
+    </footer>
+    <!-- Fin Footer -->
+
+    </form>
+
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
+</body>
+</html>

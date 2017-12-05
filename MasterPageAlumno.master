@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPageAlumno.master.cs" Inherits="MasterPageAlumno" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="headContent" Runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menuContent" Runat="Server">
+    <div class="collection">
+        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="collection-item">Materias Con Aulas Asignadas</asp:LinkButton>
+        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="collection-item">Materias Sin Aulas Asignadas</asp:LinkButton>
+        <asp:LinkButton ID="LinkButton4" runat="server" CssClass="collection-item" PostBackUrl="~/login.aspx">Iniciar Sesion</asp:LinkButton>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="principalContent" Runat="Server">
+    <asp:ContentPlaceHolder ID="contenidoContent" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>
+

@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs" Inherits="MasterPageAdmin" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="headContent" Runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menuContent" Runat="Server">
+    <div class="collection">
+        <asp:LinkButton ID="mantUsers" CssClass="collection-item" runat="server" PostBackUrl="~/mantenimientoUser.aspx">Gestionar Usuarios</asp:LinkButton>
+        <asp:LinkButton ID="manAdmin" CssClass="collection-item" runat="server" PostBackUrl="~/mantenimientoAdmin.aspx">Mantenimiento Administradores</asp:LinkButton>
+        <asp:LinkButton ID="mantDocentesBtn" runat="server" CssClass="collection-item" PostBackUrl="~/mantenimientoDocentes.aspx">Mantenimiento de Docentes</asp:LinkButton>
+        <asp:LinkButton ID="mantMateriasBtn" runat="server" CssClass="collection-item" PostBackUrl="~/mantenimientoMaterias.aspx">Mantenimiento de Materias</asp:LinkButton>
+        <asp:LinkButton ID="mantMatDocenBtn" runat="server" CssClass="collection-item" PostBackUrl="~/mantenimientoMatDoc.aspx">Getionar Materias con Docentes</asp:LinkButton>
+        <asp:LinkButton ID="mantAulasBtn" runat="server" CssClass="collection-item" PostBackUrl="~/mantenimientoAulas.aspx">Mantenimiento de Aulas</asp:LinkButton>
+        <asp:LinkButton ID="gestMateriaAulasBtn" runat="server" CssClass="collection-item" PostBackUrl="~/mantenimientoAulaMateria.aspx">Gestionar Materias con Aulas</asp:LinkButton>
+        <asp:LinkButton ID="cerrarSesionBtn" runat="server" CssClass="collection-item" OnClick="cerrarSesionBtn_Click">Cerrar Sesion</asp:LinkButton>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="principalContent" Runat="Server">
+    <asp:ContentPlaceHolder ID="contenidoContent" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
