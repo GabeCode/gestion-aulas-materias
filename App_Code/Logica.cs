@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 /// </summary>
 public static class Logica
 {
-    static private string cadena = "Data Source=DEFT-STONE; Initial Catalog= proyectoV3; Integrated Security=true";
+    static private string cadena = "Data Source=.; Initial Catalog= proyectoV3; Integrated Security=true";
     static private string consulta = "";
     static private SqlConnection cn;
     static private SqlCommand cmd;
