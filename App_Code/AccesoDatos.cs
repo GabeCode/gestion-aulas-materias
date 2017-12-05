@@ -12,7 +12,7 @@ public static class AccesoDatos
 {
 
     //metodo para conectar datos
-    static public string cadena = "Data Source=DEFT-STONE; Initial Catalog= proyectoV3; Integrated Security=true";
+    static public string cadena = "Data Source=.; Initial Catalog= proyectoV3; Integrated Security=true";
     static public SqlConnection con = new SqlConnection(cadena);
     static public SqlCommand cmd;
 
